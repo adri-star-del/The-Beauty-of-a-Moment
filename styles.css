@@ -1,0 +1,275 @@
+/* ------------------ Base Styles ------------------ */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Copperplate", "Futura", "Garamond", serif;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* Sketch container */
+#sketch {
+  margin: 20px auto;
+  display: block;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  padding: 10px;
+}
+
+/* ------------------ Labels ------------------ */
+.labels {
+  display: block;
+  width: 300px;
+  margin: 15px auto;
+  background-color: #f5e1c0;
+  color: #5a3e2b;
+  border: 1px solid #5a3e2b;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.6;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.labels-33 {
+  display: block;
+  width: 300px;
+  margin: 15px auto 25px auto;
+  background-color: rgba(60, 120, 60, 0.9);
+  color: #f5f5dc;
+  border: 1px solid #3a5f3a;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.6;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+}
+
+.labels-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  margin: 15px auto;
+  background: rgba(0, 242, 254, 0.2);
+  color: #00f2fe;
+  border: 1px solid #4facfe;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.5;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.labels-2 span#volVal {
+  margin-left: 8px;
+  font-weight: bold;
+}
+
+.labels-22 {
+  display: block;
+  width: 300px;
+  margin: 15px auto;
+  background-color: rgba(79, 172, 254, 0.9);  
+  color: white;
+  border: 1px solid #4facfe;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 12px 25px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 1.6;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+/* ------------------ Controls ------------------ */
+.controls {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  text-align: center;
+}
+
+/* ------------------ Buttons ------------------ */
+button {
+  padding: 12px 25px;
+  font-size: 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Scene-specific button colors */
+body.sketch-1920s #toggle-sound-1,
+body.sketch-1920s .back-button {
+  background-color: #f5e1c0;
+  color: #5a3e2b;
+  border: 2px solid #5a3e2b;
+}
+
+body.sketch-ocean #toggle-sound-2,
+body.sketch-ocean #random-circle-color,
+body.sketch-ocean .back-button {
+  background: linear-gradient(to right, #4facfe, #00f2fe); 
+  color: white;
+  border: none;
+}
+
+body.sketch-forest #toggle-sound-3,
+body.sketch-forest .back-button {
+  background: linear-gradient(to right, #4caf50, #2e7d32);
+  color: #f5f5dc;
+  border: 2px solid #1b5e20;
+}
+
+/* Hover effect for all buttons */
+button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* ------------------ Name Tags ------------------ */
+.name-tag-1920s {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  background-color: rgba(90, 62, 43, 0.8); 
+  color: #f5e1c0;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-family: "Copperplate", "Futura", "Garamond", serif;
+  font-size: 14px;
+  text-shadow: 1px 1px 2px #000;
+  border: 1px solid #f5e1c0;
+  z-index: 10;
+}
+
+.name-tag-ocean {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px; 
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 14px;
+  text-shadow: 1px 1px 3px #00334d;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  z-index: 10;
+}
+
+.name-tag-forest {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  background: linear-gradient(to right, #4caf50, #2e7d32);
+  color: #f5f5dc;
+  padding: 8px 15px;
+  border-radius: 15px; 
+  font-family: "Copperplate", "Futura", "Garamond", serif;
+  font-size: 14px;
+  text-shadow: 1px 1px 2px #000;
+  border: 1px solid #1b5e20;
+  z-index: 10;
+}
+
+/* ------------------ Scene Backgrounds ------------------ */
+body.sketch-1920s {
+  background-image: url('WN BG.png'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body.sketch-ocean {
+  background-image: url('WN BG.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body.sketch-forest {
+  background-image: url('WN BG.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ------------------ Scene Titles ------------------ */
+body.sketch-1920s h1 {
+  font-size: 3em;
+  color: #5a3e2b;
+  text-shadow: 2px 2px 3px #ffe5c7;
+}
+body.sketch-1920s h2 {
+  font-size: 1.8em;
+  color: #5a3e2b;
+  text-shadow: 2px 2px 3px #ffe5c7;
+  font-style: italic;
+}
+
+body.sketch-ocean h1 {
+  font-size: 2.8em;
+  color: #00f2fe;
+  text-shadow: 2px 2px 3px #dae9f1;
+}
+body.sketch-ocean h2 {
+  font-size: 1.7em;
+  color: #00f2fe;
+  text-shadow: 2px 2px 3px #dae9f1;
+  font-style: italic;
+}
+
+body.sketch-forest h1 {
+  font-size: 3em;
+  color: #3a5f3a;
+  text-shadow: 2px 2px 3px #7ec99c;
+}
+body.sketch-forest h2 {
+  font-size: 1.8em;
+  color: #4b6f4b;
+  font-style: italic;
+   text-shadow: 2px 2px 3px #7ec99c;
+}
+/* Stack buttons vertically in ocean scene */
+body.sketch-ocean .controls {
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ------------------ Responsive ------------------ */
+@media (max-width: 700px) {
+  .labels, .labels-33, .labels-2, .labels-22 {
+    width: 90%;
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+  button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  h1 { font-size: 8vw; }
+  h2 { font-size: 5.5vw; }
+  button { font-size: 14px; padding: 8px 15px; }
+}
+
+
+
+
+
+
+
+
+
